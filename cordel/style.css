@@ -67,7 +67,7 @@ section{
     line-height: 2em;
     padding-left: 30px;
     font-family: var(--font3);
-    font-size: 3vw;
+    font-size: 3.5vw;
 }
 
 section > p {
@@ -87,13 +87,16 @@ section.img{
     box-shadow: inset 6px 6px 15px 0px rgba(0, 0, 0, 0.493);
     background-size: cover;
     background-attachment: fixed;
+    padding-left: 15px;
+
 }
 
 section.img > p{
     display: inline-block;
     padding: 5px;
+    padding-right: 50px;
     background-color: rgba(0, 0, 0, 0.452);
-    width: 400px;
+
     
 }
 
