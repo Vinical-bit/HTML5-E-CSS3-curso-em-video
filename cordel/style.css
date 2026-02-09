@@ -85,7 +85,7 @@ section.img{
     color: white;
     text-shadow: 2px 2px 0px black;
     box-shadow: inset 6px 6px 15px 0px rgba(0, 0, 0, 0.493);
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
     padding-left: 15px;
 
