@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
 @font-face{
     font-family: 'cordel';
-    src: url(fonte/xilosa_.ttf); format("ttf");
+    src: url(fonte/xilosa_.ttf);
 }
 :root {
     --font1: verdana, geneva, tahoma, sans-serif;
@@ -67,7 +67,11 @@ section{
     line-height: 2em;
     padding-left: 30px;
     font-family: var(--font3);
-    font-size: 3.5vw;
+    font-size: 3vw;
+}
+
+section > p {
+    padding-bottom: 10px;
 }
 
 section.normal{
@@ -79,13 +83,28 @@ section.normal{
 section.img{
     background-color: rgb(57, 75, 230);
     color: white;
+    text-shadow: 2px 2px 0px black;
+    box-shadow: inset 6px 6px 15px 0px rgba(0, 0, 0, 0.493);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 section.img > p{
     display: inline-block;
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.884);
+    background-color: rgba(0, 0, 0, 0.452);
     width: 400px;
+    
+}
+
+section#img01{
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+}
+
+section#img02{
+    background-image: url(imagens/background002.jpg);
+    background-position: left center;
 }
 
 footer{
