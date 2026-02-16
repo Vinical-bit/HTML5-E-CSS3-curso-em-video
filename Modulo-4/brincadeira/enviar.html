@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARABÉNS! 🎉</title>
+    <link rel="stylesheet" href="brinc.css"> <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <style>
+        *{
+            color: white;
+        }
+        p{
+            padding: 5px;
+            font-size: small;
+        }
+        #card-vitoria h1 {
+            color: #ffcc00;
+            text-shadow: 2px 2px black;
+            font-size: 2.5rem;
+        }
+
+        #card-vitoria strong {
+            color: #ff4444;
+            text-decoration: underline;
+        }
+
+
+        #card-vitoria {
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body style="overflow: auto;"> <main id="card-vitoria">
+        <h1>MISSÃO CUMPRIDA! 🏆</h1>
+        <p>Seus dados foram enviados com sucesso para... <strong>lugar nenhum!</strong></p>
+        
+        <div style="margin: 20px 0;">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJmZzRyeHpxZzRyeHpxZzRyeHpxZzRyeHpxZzRyeHpxZzRyeHpx&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Zoeira" style="width: 100%; border-radius: 10px;">
+        </div>
+
+        <p>Obrigado por perder 30 segundos da sua vida preenchendo algo totalmente inútil. Você é um herói!</p>
+        
+        <a href="brindadeira.html" class="sim">FAZER TUDO DE NOVO</a>
+    </main>
+
+    <script>
+        // Chuva de confetes automática ao entrar
+        window.onload = function() {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        };
+    </script>
+</body>
+</html>
