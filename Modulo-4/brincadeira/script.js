@@ -21,36 +21,3 @@ btnNao.addEventListener('touchstart', (e) => {
     foge();
 });
 
-// Espera a página carregar totalmente
-window.onload = function() {
-    console.log("Script carregado com sucesso!");
-
-    const campos = document.querySelectorAll('.campo-form');
-    const btnEnviar = document.getElementById('btn-enviar');
-
-    function validar() {
-        // Verifica se todos os campos estão preenchidos
-        let todosPreenchidos = true;
-        
-        campos.forEach(input => {
-            if (input.value.trim() === "") {
-                todosPreenchidos = false;
-            }
-        });
-
-        console.log("Todos preenchidos?", todosPreenchidos);
-
-        if (todosPreenchidos) {
-            btnEnviar.style.pointerEvents = "auto";
-            btnEnviar.style.opacity = "1";
-        } else {
-            btnEnviar.style.pointerEvents = "none";
-            btnEnviar.style.opacity = "0.5";
-        }
-    }
-
-    // Adiciona o evento em cada campo
-    campos.forEach(input => {
-        input.addEventListener('input', validar);
-    });
-};
