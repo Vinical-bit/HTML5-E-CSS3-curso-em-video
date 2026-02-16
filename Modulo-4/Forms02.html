@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixas de formulario</title>
+</head>
+<body>
+    <h1>Tipos de caixas para formulario</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <div>
+            <label for="iusu">Usuario: </label>
+            <input type="text" name="usu" id="iusu" required minlength="5" placeholder="Nome de Usuario" autocomplete="username">
+        </div>
+        <div>
+            <label for="isen">Senha: </label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="15" size="20" placeholder="Minimo 8 caractere" autocomplete="current-password">
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
