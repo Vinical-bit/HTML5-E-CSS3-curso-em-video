@@ -39,16 +39,31 @@
             animation: pulsar 1.5s infinite;
         }
         @keyframes pulsar {
-    0% {
-        box-shadow: 0 0 0 0px rgba(76, 238, 76, 0.7);
+            0% {
+                box-shadow: 0 0 0 0px rgba(76, 238, 76, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(76, 238, 76, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0px rgba(76, 238, 76, 0);
+            }
+        }    
+
+
+    a{
+        text-decoration: none;
+        color: white;
     }
-    70% {
-        box-shadow: 0 0 0 15px rgba(76, 238, 76, 0);
+    .enviar{
+        background-color: #e2e2e23e;
+            color: aquamarine;
+            border-radius: 5px;
+            width: 60px;
     }
-    100% {
-        box-shadow: 0 0 0 0px rgba(76, 238, 76, 0);
+    .enviar:hover{
+        animation: pulsar 1.5s infinite;
     }
-}    
     </style>
 </head>
 <body>
@@ -90,7 +105,10 @@
                 <input type="reset" value="Limpar">
             </p>
         </form>
+        <p class="enviar"><a href="sim.html">ENVIAR</a></p>
         <p id="f">As informações não serão salvas</p>
+        <p  ><a href="brindadeira.html">Voltar</a></p>
+        
     </main>
 </body>
 </html>
