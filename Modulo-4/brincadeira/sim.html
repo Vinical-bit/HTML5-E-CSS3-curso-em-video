@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body{
+            background-color: rgb(66, 62, 62);
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            font-variant: small-caps;
+            text-decoration: underline;
+        }
+        main{
+            margin: 40px auto;
+            background-color: black;
+            padding: 10px;
+        }
+        input{
+            border: 2px solid rgb(49, 48, 128);
+            border-radius: 10px ;
+
+        }
+        #cor{
+            display: inline-block;
+        }
+        #f{
+            text-align: center;
+            background-color: #e2e2e23e;
+            color: aquamarine;
+            border-radius: 5px;
+        }
+        #f:hover{
+            animation: pulsar 1.5s infinite;
+        }
+        @keyframes pulsar {
+    0% {
+        box-shadow: 0 0 0 0px rgba(76, 238, 76, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(76, 238, 76, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0px rgba(76, 238, 76, 0);
+    }
+}    
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Obrigado por participar 😁</h1>
+        <form action="c.php" method="post">
+            <p>
+                <label for="inome"> Nome: </label>
+                <input type="text" name="nome" id="inome" required minlength="5" maxlength="15">
+            </p>
+            <p>
+                <label for="isobrenome">Sobrenome: </label>
+                <input type="text" name="sobrenome" id="isobrenome" required minlength="5" maxlength="15">
+            </p>
+            <p>
+                <label for="iidade">Idade: </label>
+                <input type="number" name="idade" id="iidade" required min="5" max="100">
+            </p>
+            <p>
+                <label for="idata">Data: </label>
+                <input type="date" name="data" id="idata" required>
+            </p>
+            <p>
+                <label for="inu">Numero : </label>
+                <input type="number" name="nu" id="inu" placeholder="(DD)xxxx-xxxx">
+            </p>
+            <p id="cor">
+                <label for="icor">Você se identifica como: </label>
+                <p>  preto<input type="checkbox" name="preto" id="icor"></p>
+                <p> branco <input type="checkbox" name="icor" id="icor"></p>
+                <p> pardo <input type="checkbox" name="pardo" id="icor"></p>
+            </p>
+            <p>
+                <label for="iemail"> Seu e-mail</label>
+                <input type="email" name="email" id="iemail" required placeholder="name1234@gmail.com" size="30">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </form>
+        <p id="f">As informações não serão salvas</p>
+    </main>
+</body>
+</html>

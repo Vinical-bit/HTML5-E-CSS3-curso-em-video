@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(83, 83, 83);
+    color: white;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+header {
+    text-align: center;
+    background-color: rgb(180, 180, 180) ;
+    box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.13); 
+    text-shadow: 1px 1px 2px black;
+}
+
+main{
+    position: absolute; /* Continua flutuando */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: black;
+    color: rgba(0, 0, 0, 0.767);
+    border-radius: 10px;
+    padding: 80px 20px;
+    padding-top: 5px;
+
+    box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.137);
+    
+    
+
+}
+main > section > h2{
+    font-size: 3.5vh;
+    text-align: justify;
+    margin-bottom: 30px;
+    text-align: top center;
+    font-size: large;
+    background-color: #e9e5e53d;
+    color: white;
+    border-radius: 5px;
+
+}
+section{
+    text-align: center;
+    color: white;
+
+}
+
+section > div{
+    background-color: #e2e2e2;
+    margin: 10px;
+    padding: 5px;
+    
+}
+a{
+    text-decoration: none;
+    font-weight: bolder;   
+}
+
+.sim{
+    color: rgb(16, 102, 16);
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    border: 1.5px solid transparent;
+
+}
+.sim:hover {
+    background-color: rgb(76, 238, 76);
+    color: black;
+    border: 1.5px solid black;
+    /*box-shadow: 1px 1px 1px 1.5px rgba(0, 0, 0, 0.308);*/
+    transform: translate(-3px,-3px);
+    position: relative;
+    box-shadow: 0 0 10px rgba(76,238,76,0.3);
+    animation: pulsar 1.5s infinite;
+
+    
+}
+
+@keyframes pulsar {
+    0% {
+        box-shadow: 0 0 0 0px rgba(76, 238, 76, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(76, 238, 76, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0px rgba(76, 238, 76, 0);
+    }
+}    
+
+.nao{
+    color: rgba(133, 30, 30, 0.801);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: all 0.5s ease;
+
+}
+.nao:hover{
+    background-color: red;
+    color: black;
+    border: 1.5px solid black;
+    box-shadow: 1px 1px 1px 1.5px rgba(0, 0, 0, 0.308);
+    transform: translate(-3px,-3px);
+    transition: background-color 0.2s, color 0.2s; /* Suave na cor, mas rápido no movimento */
+    z-index: 1000;
+    
+}
+footer{
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+
+}
+footer > p{
+    font-size: small;
+}
+footer > p > a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: all 0.5s ease;
+}
+.v:hover{
+    background-color: #e2e2e270;
+    border-radius: 5px;
+}
