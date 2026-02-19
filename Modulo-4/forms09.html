@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Qual a sua idade</h1>
+    <form action="cadastro.php" method="get">
+        <p>
+            <label for="idate">Ano de nascimento</label>
+            <input type="number" name="date" id="idate" min="1900" max="2026" oninput="calcIdade()">
+        </p>
+        <p>
+            <label for="iid">Sua idade: </label>
+            <output id="iid">0</output>
+        </p>
+    </form>
+    
+    <script>
+        /* function calcIdade() {
+            let atual = new Date().getFullYears()
+            iid.innerHTML = Number(atual) - Number(idate.value)
+        } */
+        function calcIdade() {
+    let atual = new Date().getFullYear();
+    
+    // Capturamos os elementos do DOM primeiro
+    let campoData = document.getElementById('idate');
+    let campoSaida = document.getElementById('iid');
+
+    // Realizamos o cálculo
+    campoSaida.innerHTML = Number(atual) - Number(campoData.value);
+}
+    </script>
+
+</body>
+</html>
