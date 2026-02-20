@@ -52,8 +52,20 @@ header > p{
     text-align: center;
 }
 
-menu{
+#burguer{
     display: block;
+    background-color: var(--color0);
+    padding: 10px;
+    cursor: pointer;
+}
+
+#burguer:hover{
+    background-color: rgba(240, 248, 255, 0.637);
+    color: var(--color1);
+}
+
+menu{
+    display: none;
 }
 
 menu > ul > li > a{
