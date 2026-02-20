@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/*t=Todas as demais medias*/
+
+/* typical devices breakpoints
+Categoria	Breakpoint (Largura)	Dispositivos Típicos
+Extra Small (xs)	< 576px	Celulares pequenos em modo retrato.
+Small (sm)	≥ 576px	Celulares grandes e tablets pequenos.
+Medium (md)	≥ 768px	Tablets (como o iPad) em modo retrato.
+Large (lg)	≥ 992px	Tablets em modo paisagem ou Laptops.
+Extra Large (xl)	≥ 1200px	Desktops e monitores de alta resolução.
+Extra Extra Large (xxl)	≥ 1400px	Monitores Ultra-wide ou telas de TV.
+*/
+@media print{
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+main{
+    width: 90vw;
+    border: 2px solid black;
+}
+
+main::after{
+    content: 'Essa impressão foi feita atraves do site vinical.com';
+    text-decoration: overline;
+}
+
+main,h1{
+    text-shadow: none;
+    color: black;
+}
+    img#phone{ display: none;}
+    img#tablet{ display: none;}
+    img#impressora{ display: block;}
+    img#pc{ display: none;}
+    img#tv{ display: none;}
+}
+
+
+
+@media screen and (min-width:768px) and (max-width:1199px) {    /*tablets */
+     body{
+        background-image: url(../img/back-tablet.jpg);
+     }
+     img#phone{ display: none;}
+     img#tablet{ display: block;}
+     img#impressora{ display: none;}
+     img#pc{ display: none;}
+     img#tv{ display: none;}
+    }
+
+@media screen and (min-width:1200px) and (max-width:1399px) {    /*desktops e monitores */
+   body{
+    background-image: url(../img/back-pc.jpg);
+   }
+    
+    img#phone{ display: none;}
+    img#tablet{ display: none;}
+    img#impressora{ display: none;}
+    img#pc{ display: block;}
+    img#tv{ display: none;}
+}
+
+@media screen and (min-width:1400px) {  /*telas grandes */
+    body{
+        background-image: url(../img/back-tv.jpg);
+    }
+
+    main{
+        width: 700px;
+    }
+
+    img#phone{ display: none;}
+    img#tablet{ display: none;}
+    img#impressora{ display: none;}
+    img#pc{ display: none;}
+    img#tv{ display: block;}
+}
+/* celulares --> mas como ja tenho a versão mobile não precisa
+@media screen and (max-width: 575px) {
+    
+}
+
+@media screen and (min-width:576px) and (max-width:767px) {
+    
+}*/
