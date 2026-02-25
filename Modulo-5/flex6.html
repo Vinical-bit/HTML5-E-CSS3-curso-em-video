@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conteiner{
+            background-color: black;
+            height: 300px;
+            display: flex;
+            flex-flow: row nowrap ;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+        .intens{
+            background-color: blue;
+            padding: 10px;
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            align-self: auto;
+        }
+        #flex{
+            align-self: flex-start;
+        }
+
+        #flex-end{
+            align-self: flex-end;
+        }
+
+        #center{
+            align-self: center;
+        }
+
+        #stretch{
+            align-self: stretch;
+        }
+        
+    </style>    
+</head>
+<body>
+    <div class="conteiner">
+        <div class="intens">1</div>
+        <div class="intens" id="flex">2</div>
+        <div class="intens" id="flex-end">3</div>
+        <div class="intens" id="center">4</div>
+        <div class="intens" id="stretch">5</div>
+        <div class="intens">6</div>
+    </div>
+</body>
+</html>
