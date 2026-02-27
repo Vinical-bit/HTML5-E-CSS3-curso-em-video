@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="mq.css" media="screen and (max-width: 580px)">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
-        <h1 class="title">O Preço da Conexão</h1>
-        <menu>
-            <a href="#">OPÇÃO 1</a>
-            <a href="#">OPÇÃO2</a>
-            <a href="#">OPÇÃO3</a>
-            <a href="#">OPÇÃO4</a>
+        <h1>O Preço da Conexão</h1>
+       
+        <menu id="intens">
+            <a href="../cordel/cordel.html">OPÇÃO 1</a>
+            <a href="../tela-login/login.html">OPÇÃO2</a>
+            <a href="../Modulo-4/brincadeira/brindadeira.html">OPÇÃO3</a>
+            <a href="../Modulo-4/mq05/mq05.html">OPÇÃO4</a>
             <a href="#">OPÇÃO5</a>
         </menu>
-        
+         <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()" >menu</span>
     </header>
     <main>
         <article>
@@ -55,5 +58,40 @@
     <footer>
 
     </footer>
+    <script>
+        function mudouTamanho() {
+            if(window.innerWidth >= 580){
+                intens.style.display = 'flex'
+            }else{
+                intens.style.display = 'none'
+            }
+        }
+
+        function clickMenu(){
+            if(intens.style.display == 'flex'){
+                intens.style.display = 'none'
+            }else{
+                intens.style.display = 'flex'
+            }
+        }
+
+        function clickMenu() {
+            let menu = document.getElementById('intens');
+            
+            // O 'toggle' adiciona a classe se não tiver, e remove se já tiver
+            menu.classList.toggle('aberto');
+        }
+
+        // Para garantir que o menu apareça se o usuário aumentar a tela
+        window.onresize = function() {
+            let menu = document.getElementById('intens');
+            if (window.innerWidth >= 580) {
+                menu.classList.remove('aberto');
+                menu.style.maxHeight = 'none'; // Tira o limite de altura no desktop
+            } else {
+                menu.style.maxHeight = ''; // Devolve o controle para o CSS no mobile
+            }
+};
+    </script>
 </body>
 </html>

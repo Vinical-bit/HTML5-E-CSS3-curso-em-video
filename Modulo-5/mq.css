@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+header, header > menu#intens{
+    flex-flow: column nowrap;
+}
+
+header > h1 {
+    flex-basis: 50px;
+}
+header > menu#intens > a{
+    width: 90vw;
+
+}
+
+@media screen and (min-width: 580px){
+    #burguer{
+        display: none;
+    }
+    
+}
+
+/* Configurações para Celular (Mobile First) */
+@media screen and (max-width: 580px) {
+    header, header > menu#intens {
+        display: flex; /* Garante que é flex */
+        flex-flow: column nowrap;
+    }
+
+    header > h1 {
+        flex-basis: 50px;
+    }
+
+    header > menu#intens > a {
+        width: 90vw;
+    }
+
+    /* O menu começa escondido no mobile */
+    #intens {
+        display: none; 
+    }
+
+    #intens {
+        display: flex; /* Mantenha o flex que você gosta! */
+        flex-flow: column nowrap;
+        overflow: hidden;
+        max-height: 0; /* Começa com altura zero (escondido) */
+        transition: max-height 0.7s ease-in-out; /* A mágica acontece aqui */
+    }
+
+    #intens.aberto {
+        max-height: 500px; /* Um valor alto o suficiente para caber o menu */
+    }
+}
