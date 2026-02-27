@@ -2,7 +2,7 @@
 
 :root{
     --color1: #FFFFFF;
-    --color2: #F7EDE2;
+    --color2: #f3ede7c9;
     --color3: #D9CDBF;
     --color4: #8C7549;
     --color5: #E4E9F2;
@@ -23,28 +23,33 @@ header{
     background-image: linear-gradient(to top,#bfb4aafd,#FFFFFF);
     padding: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.397);
+    border: 1px solid;
 }
 
-h1.title{
+header > h1.title{
     text-align: center;
     text-shadow: 1px 1px 1px #7970676b;
     font-family: 'Times New Roman', Times, serif;
     font-variant: small-caps;
     font-size: 2.5em;
     color: #374b70;
+    border: 1px solid ;
+    display: flex;
 }
-p.title{
+header > p.title{
     text-align: center;
     font-size: 1.2em;
     color: #000000a1;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.418);
+    border: 1px solid;
 }
-menu{
+header > menu{
     margin-top: 10px;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-content: space-around;
+    border: 1px solid;
 }
 menu > a{
     margin: 0px 5px;
