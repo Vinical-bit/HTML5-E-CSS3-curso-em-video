@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            border: 1px solid black;
+            place-content: normal normal;
+            place-items: normal normal;
+            grid-template: repeat(10,1fr)/repeat(4,1fr);
+            text-align: center;
+            color: rgba(204, 174, 174, 0.966);
+        }
+        .caixa1{
+            border: 1px solid black;
+            background-color: aqua ;
+            padding: 10px;
+            grid-area: 1/1/2/-1;
+        }
+        .caixa2{
+            border: 1px solid black;
+            background-color: blue ;
+            padding: 10px;
+            grid-area: 2/1/2/-1;
+        }
+        .caixa3{
+            border: 1px solid black;
+            background-color: red;
+            padding: 10px;
+            grid-area: 3/1/-2/-2;
+        }
+        .caixa4{
+            border: 1px solid black;
+            background-color: purple ;
+            padding: 10px;
+            grid-area: 3/-2/-2/-1;
+        }
+        .caixa5{
+            border: 1px solid black;
+            background-color: rgba(189, 230, 93, 0.877);
+            padding: 10px;
+            grid-area: -2/1/-1/-1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caixa1">Topo</div>
+        <div class="caixa2">Menu</div>
+        <div class="caixa3">Principal</div>
+        <div class="caixa4">Secundario</div>
+        <div class="caixa5">Rodape</div>
+    </div>
+</body>
+</html>
