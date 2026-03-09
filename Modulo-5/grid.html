@@ -9,14 +9,20 @@
             border: 3px solid blue;
             height: 300px;
             display: grid;
-            grid-template-columns: auto auto auto;
-            grid-template-rows: auto auto auto ;
+            /*grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto ;*/
+            grid-template: repeat(3,80px)/100px 50% 1fr 1fr;
+            grid-auto-rows: 80px;
+            grid-auto-columns: 100px;
+            grid-auto-flow: row;
             gap: 15px;
 
-            align-content: space-between;
-            justify-content: space-around;
-            align-items: start;
-            justify-items: center;
+           /* align-content: space-between;
+            justify-content: space-around;*/
+            place-content: normal normal;
+            /*align-items: start;
+            justify-items: center;*/
+            place-items: normal normal;
             
         }
 
@@ -36,6 +42,5 @@
         <div class="item">F</div>
         <div class="item">G</div>
         <div class="item">H</div>
-    </div>
 </body>
 </html>
