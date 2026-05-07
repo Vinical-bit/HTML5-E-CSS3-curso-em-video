@@ -50,14 +50,14 @@ header > menu#intens{
     flex-flow: row wrap;
     justify-content: flex-start;
     align-content: space-around;
-
+    
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-content: space-evenly;
-
-
-
+}
+header > menu#intens>:hover{
+    filter: drop-shadow(1px 1px 15px rgba(0, 0, 0, 0.474));
 }
 #burguer{
     display: block;
